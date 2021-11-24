@@ -1,4 +1,4 @@
-function throttle(fn, interval, options = { leading: true, trailing: false }) {
+module.export = function throttle(fn, interval, options = { leading: true, trailing: false }) {
   const { leading, trailing, resultCallback } = options;
   let lastTime = 0;
   let timer = null;

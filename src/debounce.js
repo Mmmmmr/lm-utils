@@ -1,4 +1,4 @@
-function debounce(fn, delay, immediate = false, resultCallback) {
+module.export = function debounce(fn, delay, immediate = false, resultCallback) {
   let timer = null;
   let isInvoke = false;
   const _debounce = function (...args) {
