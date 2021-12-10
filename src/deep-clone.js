@@ -1,9 +1,9 @@
-module.export = function isObject(value) {
+function isObject(value) {
   const valueType = typeof value;
   return value !== null && (valueType === "object" || valueType === "function");
 }
 
-function deepClone(originValue, map = new WeakMap()) {
+module.export = function deepClone(originValue, map = new WeakMap()) {
   if (originValue instanceof Set) {
     return new Set([...originValue]);
   }
@@ -39,4 +39,4 @@ function deepClone(originValue, map = new WeakMap()) {
   }
 
   return newObject;
-}
+};
