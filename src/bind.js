@@ -15,11 +15,3 @@ Function.prototype.mybind = function (thisArg, ...args) {
     return result;
   };
 };
-
-function foo(a, b, c, d) {
-  console.log(this);
-  return a + b + c + d;
-}
-
-foo.bind("hllo")();
-console.log(foo.mybind("hello", 10)(20, 30, 40));
